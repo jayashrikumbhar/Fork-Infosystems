@@ -1,0 +1,500 @@
+/* Variables */
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #1f2937;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+.header {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.header .logo .header-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.header .workshop-title h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.header .workshop-title p {
+  font-size: 1.25rem;
+  color: #6b7280;
+  margin-bottom: 15px;
+}
+
+.header .workshop-title .language-badge {
+  display: inline-block;
+  background: #f59e0b;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Section titles */
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #2563eb;
+  border-radius: 2px;
+}
+
+/* Overview section */
+.overview {
+  margin-bottom: 40px;
+}
+
+.overview .overview-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.overview .overview-card .overview-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.overview .overview-card .overview-item:hover {
+  transform: translateY(-2px);
+}
+
+.overview .overview-card .overview-item i {
+  font-size: 1.5rem;
+  color: #2563eb;
+  width: 40px;
+  text-align: center;
+}
+
+.overview .overview-card .overview-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 5px;
+}
+
+.overview .overview-card .overview-item p {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* Schedule section */
+.schedule {
+  margin-bottom: 40px;
+}
+
+.schedule .schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.schedule .schedule-grid .session-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.schedule .schedule-grid .session-card:hover {
+  transform: translateY(-5px);
+}
+
+.schedule .schedule-grid .session-card .session-header {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+.schedule .schedule-grid .session-card .session-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.schedule .schedule-grid .session-card .session-header .time {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.schedule .schedule-grid .session-card .session-content {
+  padding: 25px;
+}
+
+.schedule .schedule-grid .session-card .session-content h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 15px;
+}
+
+.schedule .schedule-grid .session-card .session-content ul {
+  list-style: none;
+}
+
+.schedule .schedule-grid .session-card .session-content ul li {
+  padding: 8px 0;
+  color: #6b7280;
+  position: relative;
+  padding-left: 20px;
+}
+
+.schedule .schedule-grid .session-card .session-content ul li::before {
+  content: '•';
+  color: #2563eb;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.schedule .schedule-grid .session-card .session-content ul li.sub-list {
+  padding-left: 0;
+}
+
+.schedule .schedule-grid .session-card .session-content ul li.sub-list span {
+  display: block;
+  padding: 4px 0;
+  padding-left: 20px;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.schedule .schedule-grid .session-card .session-content ul li.sub-list span::before {
+  content: '◦';
+  color: #f59e0b;
+  position: absolute;
+  left: 0;
+}
+
+/* Key points section */
+.key-points {
+  margin-bottom: 40px;
+}
+
+.key-points .key-points-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.key-points .key-points-grid .key-point-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.key-points .key-points-grid .key-point-card:hover {
+  transform: translateY(-5px);
+}
+
+.key-points .key-points-grid .key-point-card i {
+  font-size: 2.5rem;
+  color: #f59e0b;
+  margin-bottom: 20px;
+}
+
+.key-points .key-points-grid .key-point-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 15px;
+}
+
+.key-points .key-points-grid .key-point-card p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Registration section */
+.registration {
+  margin-bottom: 40px;
+}
+
+.registration .registration-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.registration .registration-info .info-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.registration .registration-info .info-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.registration .registration-info .info-card h3 i {
+  color: #2563eb;
+}
+
+.registration .registration-info .info-card ul {
+  list-style: none;
+}
+
+.registration .registration-info .info-card ul li {
+  padding: 8px 0;
+  color: #6b7280;
+  position: relative;
+  padding-left: 20px;
+}
+
+.registration .registration-info .info-card ul li::before {
+  content: '✓';
+  color: #10b981;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.registration .important-notice {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+  color: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.registration .important-notice h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.registration .important-notice ul {
+  list-style: none;
+}
+
+.registration .important-notice ul li {
+  padding: 8px 0;
+  position: relative;
+  padding-left: 25px;
+}
+
+.registration .important-notice ul li::before {
+  content: '⚠';
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Contact section */
+.contact {
+  margin-bottom: 40px;
+}
+
+.contact .contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.contact .contact-info .contact-item {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.contact .contact-info .contact-item i {
+  font-size: 2.5rem;
+  color: #2563eb;
+  margin-bottom: 20px;
+}
+
+.contact .contact-info .contact-item h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 15px;
+}
+
+.contact .contact-info .contact-item p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .header {
+    padding: 30px 20px;
+  }
+  
+  .header .logo .header-logo {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .header .logo h1 {
+    font-size: 2rem;
+  }
+  
+  .header .workshop-title h2 {
+    font-size: 1.5rem;
+  }
+  
+  .overview .overview-card {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  
+  .schedule .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .key-points .key-points-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .registration .registration-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact .contact-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.schedule-card,
+.key-point-card,
+.info-card,
+.contact-item {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Hover effects */
+.overview-item,
+.session-card,
+.key-point-card,
+.info-card,
+.contact-item {
+  transition: all 0.3s ease;
+}
+
+.overview-item:hover,
+.session-card:hover,
+.key-point-card:hover,
+.info-card:hover,
+.contact-item:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+} 
